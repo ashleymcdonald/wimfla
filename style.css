@@ -1,0 +1,229 @@
+.key {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center;
+    position: absolute;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    white-space: pre-line;
+    cursor: pointer;
+    padding: 1px 1px 3px;
+    border-radius: 6px;
+    font-family: Montserrat, sans-serif;
+    font-size: var(--default-key-font-size);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 120%;
+    -webkit-box-shadow: 0 -1px 0px 3px inset rgb(0 0 0 / 10%), 0px 0px 0px 1px rgb(0 0 0 / 30%);
+    box-shadow: 0 -1px 0 3px inset #0000001a, 0 0 0 1px #0000004d;
+    border-left: 1px solid rgba(0, 0, 0, .1);
+    border-right: 1px solid rgba(0, 0, 0, .1);
+    width: calc(var(--unit-width) * var(--default-key-x-spacing) - (var(--default-key-x-spacing) - var(--default-key-width)));
+    height: calc(var(--unit-height) * var(--default-key-y-spacing) - (var(--default-key-y-spacing) - var(--default-key-height)));
+    background: #44475a;
+    color: #f8f8f2;
+}
+
+.key[data-pressed='true']::after {
+    background: black !important;
+}
+
+html {
+    background-color: #46464622;
+    /*292929;*/
+}
+
+body {
+    display: flex;
+    /* flex-direction: column; */
+    margin: 10px;
+    justify-content: center;
+    align-items: center;
+    -webkit-perspective-origin-x: center;
+    overflow: hidden;
+    -webkit-app-region: drag;
+}
+
+.resizer {
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 1;
+}
+
+.resizer > div {
+    display: inline-block;
+    text-align: center;
+    width: 1.5em;
+    margin: 5px;
+    line-height: 1.5em;
+    border-radius: 3px;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    box-shadow: 1px 1px rgb(255 255 255 / 50%);
+}
+
+
+#visual-keymap {
+    position: relative;
+    --unit-width: 1;
+    --unit-height: 1;
+    --default-smaller-key-font-size: 0.61rem;
+    --default-bigger-key-font-size: 1.4rem;
+    --default-key-font-size: 0.85rem;
+    --default-key-height: 40px;
+    --default-key-width: 40px;
+    --default-key-x-spacing: 45px;
+    --default-key-y-spacing: 45px;
+    width: 738px;
+    height: 250px;
+    /*transform: scale(calc(100vw - 20px / 738));*/
+    box-sizing: border-box;
+    /* transform-origin: left; */
+}
+
+/* @formatter:off */
+#key-0 { top: 33.75px;padding-top: 7px; }
+#key-1 { top: 33.75px; left: 45px; }
+#key-2 { top: 11.25px; left: 90px; }
+#key-3 { left: 135px; }
+#key-4 { top: 11.25px; left: 180px; }
+#key-5 { top: 22.5px; left: 225px; }
+#key-6 { top: 22.5px; left: 472.5px; }
+#key-7 { top: 11.25px; left: 517.5px; }
+#key-8 { left: 562.5px; }
+#key-9 { top: 11.25px; left: 607.5px; }
+#key-10 { top: 33.75px; left: 652.5px; }
+#key-11 { top: 33.75px; left: 697.5px; }
+#key-12 { top: 78.75px; }
+#key-13 { top: 78.75px; left: 45px; }
+#key-14 { top: 56.25px; left: 90px; }
+#key-15 { top: 45px; left: 135px; }
+#key-16 { top: 56.25px; left: 180px; }
+#key-17 { top: 67.5px; left: 225px; }
+#key-18 { top: 67.5px; left: 472.5px; }
+#key-19 { top: 56.25px; left: 517.5px; }
+#key-20 { top: 45px; left: 562.5px; }
+#key-21 { top: 56.25px; left: 607.5px; }
+#key-22 { top: 78.75px; left: 652.5px; }
+#key-23 { top: 78.75px; left: 697.5px; }
+#key-24 { top: 123.75px; }
+#key-25 { top: 123.75px; left: 45px; }
+#key-26 { top: 101.25px; left: 90px; }
+#key-27 { top: 90px; left: 135px; }
+#key-28 { top: 101.25px; left: 180px; }
+#key-29 { top: 112.5px; left: 225px; }
+#key-30 { top: 135px; left: 270px; transform: rotate(33deg); }
+#key-31 { top: 168.25px; left: 316px; transform: rotate(45deg); font-size: var(--default-smaller-key-font-size); }
+#key-32 { top: 169.25px; left: 383.5px; color: #50fa7b; transform: rotate(-45deg); }
+#key-33 { top: 135px; left: 429.5px; transform: rotate(-31deg); }
+#key-34 { top: 112.5px; left: 472.5px; }
+#key-35 { top: 101.25px; left: 517.5px; }
+#key-36 { top: 90px; left: 562.5px; }
+#key-37 { top: 101.25px; left: 607.5px; }
+#key-38 { top: 123.75px; left: 652.5px; }
+#key-39 { top: 123.75px; left: 697.5px; }
+#key-40 { top: 146.25px; left: 112.5px; font-size: var(--default-smaller-key-font-size); color: #ff79c6; }
+#key-41 { top: 146.25px; left: 157.5px; }
+#key-42 { top: 153.5px; left: 204.5px; transform: rotate(15deg); }
+#key-43 { top: 171px; left: 247.5px; transform: rotate(30deg); }
+#key-44 { top: 200.25px; left: 284.5px; color: #bd93f9; transform: rotate(44deg); }
+#key-45 { top: 200.25px; left: 414px; color: #8be9fd; transform: rotate(-45deg); }
+#key-46 { top: 173px; left: 450px; transform: rotate(-31deg); }
+#key-47 { top: 153.5px; left: 494px; transform: rotate(-15deg); }
+#key-48 { top: 146.25px; left: 540px; }
+#key-49 { top: 146.25px; left: 585px; }
+/* @formatter:on */
+
+.key[data-default]::before {
+    content: attr(data-default)
+}
+
+.key[data-default] {
+    background: #282a36; /* color: #ff79c6; */
+}
+
+.layer_symbols > div.key[data-symbols]::before {
+    content: attr(data-symbols)
+}
+
+.layer_nav > div.key[data-nav]::before {
+    content: attr(data-nav)
+}
+
+.layer_adjust > div.key[data-adjust]::before {
+    content: attr(data-adjust)
+}
+
+.layer_fn > div.key[data-fn]::before {
+    content: attr(data-fn)
+}
+
+.layer_symbols > div.key:not([data-symbols]),
+.layer_nav > div.key:not([data-nav]),
+.layer_fn > div.key:not([data-fn]),
+.layer_adjust > div.key:not([data-adjust]) {
+    opacity: 0.75
+}
+
+.layer_nav > div.key.nav,
+.layer_symbols > div.key.symbols,
+.layer_fn > div.key.fn,
+.layer_adjust > div.key.adjust {
+    border-color: initial;
+    border-width: 2px;
+}
+
+.layer_qwerty > div.key.q-sm,
+.layer_nav > div.key.n-sm,
+.layer_symbols > div.key.s-sm,
+.layer_fn > div.key.f-sm,
+.layer_adjust > div.key.a-sm,
+.key.smaller {
+    font-size: var(--default-smaller-key-font-size);
+}
+
+.layer_qwerty > div.key.q-bg,
+.layer_nav > div.key.n-bg,
+.layer_symbols > div.key.s-bg,
+.layer_fn > div.key.f-bg,
+.layer_adjust > div.key.a-bg,
+.key.bigger {
+    font-size: var(--default-bigger-key-font-size);
+}
+
+.layer_qwerty > div.key[data-qwerty]::before {
+    content: attr(data-qwerty)
+}
+
+.key[data-default] {
+    opacity: 1 !important;
+}
+
+div.key.knob {
+    border-radius: 50%;
+}
+
+
+div.key.active {
+    border-color: initial;
+    border-width: 2px;
+}
+
+div.key[data-hold]::after {
+    content: attr(data-hold);
+    position: absolute;
+    bottom: 0;
+    font-size: 8px;
+    line-height: 8px;
+    width: 100%;
+    background: #0003;
+    border-radius: 0px 0px 5px 5px;
+    color: #bd93f9;
+}

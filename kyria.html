@@ -1,0 +1,60 @@
+<html>
+<head></head>
+<body data-theme="dark">
+<div class="resizer"><div onclick="resize(0.1)">+</div><div onclick="resize(-0.1)">-</div></div>
+<link rel="stylesheet" href="style.css"/>
+<div id="visual-keymap" class="layer_qwerty" data-scale="1">
+    <div id="key-0" class="key knob bigger" data-qwerty="⭾" data-symbols="`"></div>
+    <div id="key-1" class="key f-sm" data-qwerty="Q" data-symbols="1" data-fn="F9"></div>
+    <div id="key-2" class="key f-sm" data-qwerty="W" data-symbols="2" data-fn="F10"></div>
+    <div id="key-3" class="key f-sm" data-qwerty="E" data-symbols="3" data-fn="F11"></div>
+    <div id="key-4" class="key f-sm" data-qwerty="R" data-symbols="4" data-fn="F12"></div>
+    <div id="key-5" class="key" data-qwerty="T" data-symbols="5"></div>
+    <div id="key-6" class="key n-sm" data-qwerty="Y" data-symbols="6" data-nav="PgUp"></div>
+    <div id="key-7" class="key n-sm" data-qwerty="U" data-symbols="7" data-nav="Home"></div>
+    <div id="key-8" class="key n-bg" data-qwerty="I" data-symbols="8" data-nav="&uarr;"></div>
+    <div id="key-9" class="key n-sm" data-qwerty="O" data-symbols="9" data-nav="End"></div>
+    <div id="key-10" class="key n-bg" data-qwerty="P" data-symbols="0" data-nav="🔊"></div>
+    <div id="key-11" class="key knob q-bg n-bg" data-qwerty="⌫" data-symbols="=" data-nav="⌦"></div>
+    <div id="key-12" class="key q-sm" data-qwerty="Esc" data-symbols="~" data-hold="Control" onclick="layer('qwerty')"></div>
+    <div id="key-13" class="key f-sm n-sm" data-qwerty="A" data-symbols="!" data-fn="F5" data-nav="Win"></div>
+    <div id="key-14" class="key f-sm n-sm" data-qwerty="S" data-symbols="@" data-fn="F6" data-nav="Alt"></div>
+    <div id="key-15" class="key f-sm n-sm" data-qwerty="D" data-symbols="#" data-fn="F7" data-nav="Ctrl"></div>
+    <div id="key-16" class="key f-sm n-bg" data-qwerty="F" data-symbols="$" data-fn="F8" data-nav="⇧"></div>
+    <div id="key-17" class="key" data-qwerty="G" data-symbols="%"></div>
+    <div id="key-18" class="key n-sm" data-qwerty="H" data-symbols="^" data-nav="PgDn"></div>
+    <div id="key-19" class="key n-bg f-bg" data-qwerty="J" data-symbols="&" data-fn="⇧" data-nav="&larr;"></div>
+    <div id="key-20" class="key n-bg f-sm" data-qwerty="K" data-symbols="*" data-fn="Ctrl" data-nav="&darr;"></div>
+    <div id="key-21" class="key n-bg f-sm" data-qwerty="L" data-symbols="(" data-fn="Alt" data-nav="&rarr;"></div>
+    <div id="key-22" class="key n-bg f-sm" data-qwerty=":&#xa;;" data-symbols=")" data-fn="Win" data-nav="🔉"></div>
+    <div id="key-23" class="key n-sm" data-qwerty="&quot;&#xa;'" data-symbols="+" data-nav="Ins" data-hold="Control"></div>
+    <div id="key-24" class="key q-bg" data-qwerty="⇧" data-symbols="|" data-hold="Shift"></div>
+    <div id="key-25" class="key f-sm" data-qwerty="Z" data-symbols="\" data-fn="F1"></div>
+    <div id="key-26" class="key f-sm" data-qwerty="X" data-symbols=":" data-fn="F2"></div>
+    <div id="key-27" class="key f-sm" data-qwerty="C" data-symbols=";" data-fn="F3"></div>
+    <div id="key-28" class="key f-sm" data-qwerty="V" data-symbols="-" data-fn="F4"></div>
+    <div id="key-29" class="key" data-qwerty="B" data-symbols="["></div>
+    <div id="key-30" class="key" data-qwerty="{&#xa;[" data-symbols="{" onclick="resize(-0.1)"></div>
+    <div id="key-31" class="key smaller" data-default="Caps Lock"  data-nav="Scroll Lock"></div>
+    <div id="key-32" class="key fn smaller" data-default="F-Keys" onclick="layer('fn')"></div>
+    <div id="key-33" class="key" data-qwerty="}&#xa;]" data-symbols="}" onclick="resize(0.1)"></div>
+    <div id="key-34" class="key n-sm" data-qwerty="N" data-symbols="]" data-nav="Pause Break"></div>
+    <div id="key-35" class="key n-bg" data-qwerty="M" data-symbols="_" data-nav="⏮"></div>
+    <div id="key-36" class="key n-bg" data-qwerty="&lt;&#xa;," data-symbols="," data-nav="⏯"></div>
+    <div id="key-37" class="key n-bg" data-qwerty="&gt;&#xa;." data-symbols="." data-nav="⏭"></div>
+    <div id="key-38" class="key n-bg" data-qwerty="?&#xa;/" data-symbols="/" data-nav="🔈"></div>
+    <div id="key-39" class="key q-bg n-sm" data-qwerty="⇧" data-symbols="?" data-nav="PrtSc" data-hold="Shift"></div>
+    <div id="key-40" class="key adjust" data-default="Adjust" onclick="layer('adjust')"></div>
+    <div id="key-41" class="key bigger" data-default="⌘" data-hold="Win"></div>
+    <div id="key-42" class="key bigger" data-default="⏎" data-hold="Alt"></div>
+    <div id="key-43" class="key bigger" data-default=" ␣ "></div>
+    <div id="key-44" class="key nav smaller" data-default="Nav" onclick="layer('nav')"></div>
+    <div id="key-45" class="key symbols smaller" data-default="Sym" onclick="layer('symbols')"></div>
+    <div id="key-46" class="key bigger" data-default=" ␣ "></div>
+    <div id="key-47" class="key bigger" data-default="⌥" data-hold="AltGr"></div>
+    <div id="key-48" class="key bigger" data-default="⌘" data-hold="Win"></div>
+    <div id="key-49" class="key bigger" data-default="▤"></div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

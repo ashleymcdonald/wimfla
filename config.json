@@ -1,0 +1,4 @@
+{
+  "layers": ["qwerty", "nav", "sym", "function", "adjust"],
+  "driver": "zmk"
+}

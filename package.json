@@ -1,0 +1,45 @@
+{
+  "name": "wimfla",
+  "version": "1.0.0",
+  "description": "A simple keyboard layout helper.",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make"
+  },
+  "keywords": [],
+  "author": "Ashley McDonald <ashley@mcdonald.am>",
+  "license": "ISC",
+  "dependencies": {
+    "@ashleymcdonald/hid-listen": "^1.1.0",
+    "@serialport/parser-readline": "^10.3.0",
+    "electron-squirrel-startup": "^1.0.0",
+    "serialport": "^10.3.0"
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^6.0.0-beta.63",
+    "@electron-forge/maker-deb": "^6.0.0-beta.63",
+    "@electron-forge/maker-rpm": "^6.0.0-beta.63",
+    "@electron-forge/maker-squirrel": "^6.0.0-beta.63",
+    "@electron-forge/maker-zip": "^6.0.0-beta.63",
+    "electron": "^17.0.0"
+  },
+  "config": {
+    "forge": {
+      "packagerConfig": {},
+      "makers": [
+        {
+          "name": "@electron-forge/maker-squirrel",
+          "config": {
+            "name": "keebs"
+          }
+        },
+        {
+          "name": "@electron-forge/maker-zip"
+        }
+      ]
+    }
+  }
+}
